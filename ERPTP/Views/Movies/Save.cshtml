@@ -1,0 +1,45 @@
+﻿@model ERPTP.ViewModel.MovieFormViewModel
+@{
+    ViewBag.Title = "Save";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (Model.Movie.Id == 0)
+{
+    <h2>New Movie</h2>
+}
+else
+{
+    <h2>Edit Movie</h2>
+}
+@using (Html.BeginForm("Save", "Movies"))
+{
+    <div class="form-group">
+        @Html.LabelFor(n=>n.Movie.Name)
+        @Html.TextBoxFor(n=>n.Movie.Name, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n=>n.Movie.AddedDate)
+        @Html.TextBoxFor(n=>n.Movie.AddedDate, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n=>n.Movie.ReleaseDate)
+        @Html.TextBoxFor(n=>n.Movie.ReleaseDate, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n=>n.Movie.NumberOfStock)
+        @Html.TextBoxFor(n=>n.Movie.NumberOfStock, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n=>n.Movie.GenreId)
+        @Html.DropDownListFor(g=>g.Movie.GenreId, new SelectList(Model.Movies, "Id", "Name"), "Select Genre", new { @class = "form-control" })
+    </div>
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(n => n.Movie.IsSubscribedToNewsletter) Sebscribed to NewsLetter?
+        </label>
+    </div>
+    @Html.HiddenFor(i=>i.Movie.Id)
+    <button class="btn btn-default">Save</button>
+}
+
+

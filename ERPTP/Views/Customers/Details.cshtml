@@ -1,0 +1,16 @@
+﻿@model ERPTP.Models.Customer
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<h3>@Model.Name</h3>
+<ul>
+    <li>MembershipType: <b>@Model.MembershipType.Name</b></li>
+    @if (Model.Birthday.HasValue)
+    {
+        <li>Birthday: @Model.Birthday.Value.ToShortDateString()</li>
+    }
+</ul>
