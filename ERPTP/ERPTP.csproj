@@ -251,6 +251,14 @@
     <Compile Include="Migrations\201711151422575_IsSubscribe.Designer.cs">
       <DependentUpon>201711151422575_IsSubscribe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711160837048_AddValidtaionRequired.cs" />
+    <Compile Include="Migrations\201711160837048_AddValidtaionRequired.Designer.cs">
+      <DependentUpon>201711160837048_AddValidtaionRequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711161005452_AddValidtaionRequiredinMovie.cs" />
+    <Compile Include="Migrations\201711161005452_AddValidtaionRequiredinMovie.Designer.cs">
+      <DependentUpon>201711161005452_AddValidtaionRequiredinMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -258,6 +266,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YrarsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -384,6 +393,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711151422575_IsSubscribe.resx">
       <DependentUpon>201711151422575_IsSubscribe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711160837048_AddValidtaionRequired.resx">
+      <DependentUpon>201711160837048_AddValidtaionRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711161005452_AddValidtaionRequiredinMovie.resx">
+      <DependentUpon>201711161005452_AddValidtaionRequiredinMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

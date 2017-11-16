@@ -37,13 +37,25 @@ namespace ERPTP.Controllers
         {
             var viewModel = new MovieFormViewModel
             {
+                Movie = new Movie(),
                 Genres = _context.Genres.ToList()
             };
             return View(viewModel);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel()
+                {
+                    Movie = movie,
+                    Genres = _context.Genres.ToList()
+                };
+                return View(viewModel);
+            }
+                
             if (movie.Id == 0)
             {
                 _context.Movies.Add(movie);
@@ -56,7 +68,6 @@ namespace ERPTP.Controllers
                 moviesInDb.ReleaseDate = movie.ReleaseDate;
                 moviesInDb.NumberOfStock = movie.NumberOfStock;
                 moviesInDb.GenreId = movie.GenreId;
-                moviesInDb.IsSubscribedToNewsletter = movie.IsSubscribedToNewsletter;
             }
             _context.SaveChanges();
             var movieList = _context.Movies.Include(c => c.Genre).ToList();

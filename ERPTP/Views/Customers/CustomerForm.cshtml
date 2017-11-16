@@ -3,7 +3,7 @@
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@if (Model.Customer == null)
+@if (Model.Customer.Id == 0)
 {
     <h2>New Customer</h2>
 }
@@ -15,17 +15,21 @@ else
 <h5>@Html.ActionLink("Back to List", "Customer")</h5>
 @using (Html.BeginForm("Save", "Customers"))
 {
+    @Html.ValidationSummary(true, "Please fix the following errors.")
     <div class="form-group">
         @Html.LabelFor(n=>n.Customer.Name)
         @Html.TextBoxFor(n=>n.Customer.Name, new {@class = "form-control"})
+        @Html.ValidationMessageFor(n=>n.Customer.Name)
     </div>
     <div class="form-group">
         @Html.LabelFor(n=>n.Customer.Birthday)
         @Html.TextBoxFor(n=>n.Customer.Birthday, "{0:d MMM yyyy}", new {@class = "form-control"})
+        @Html.ValidationMessageFor(b=>b.Customer.Birthday)
     </div>
     <div class="form-group">
         @Html.LabelFor(n=>n.Customer.MembershipTypeId)
         @Html.DropDownListFor(c=>c.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership", new{ @class = "form-control"})
+        @Html.ValidationMessageFor(m=>m.Customer.MembershipTypeId)
     </div>
     <div class="checkbox">
         <label>
@@ -33,5 +37,10 @@ else
         </label>
     </div>
     @Html.HiddenFor(c=>c.Customer.Id)
+    @Html.AntiForgeryToken()
     <button class="btn btn-default">Save</button>
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
 }
