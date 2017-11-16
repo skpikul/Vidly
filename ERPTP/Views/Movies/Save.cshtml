@@ -3,7 +3,7 @@
     ViewBag.Title = "Save";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@if (Model.Movie.Id == 0)
+@if (Model.Movie == null)
 {
     <h2>New Movie</h2>
 }
@@ -11,6 +11,7 @@ else
 {
     <h2>Edit Movie</h2>
 }
+<h5>@Html.ActionLink("Back To List", "Random")</h5>
 @using (Html.BeginForm("Save", "Movies"))
 {
     <div class="form-group">
@@ -31,7 +32,7 @@ else
     </div>
     <div class="form-group">
         @Html.LabelFor(n=>n.Movie.GenreId)
-        @Html.DropDownListFor(g=>g.Movie.GenreId, new SelectList(Model.Movies, "Id", "Name"), "Select Genre", new { @class = "form-control" })
+        @Html.DropDownListFor(g=>g.Movie.GenreId, new SelectList(Model.Genres, "Id", "Name"), "Select Genre", new { @class = "form-control" })
     </div>
     <div class="checkbox">
         <label>

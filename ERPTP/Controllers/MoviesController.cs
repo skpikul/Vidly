@@ -35,22 +35,44 @@ namespace ERPTP.Controllers
 
         public ActionResult Save()
         {
-            var genre = _context.Genres.ToList();
             var viewModel = new MovieFormViewModel
             {
-                Genres = genre
+                Genres = _context.Genres.ToList()
             };
             return View(viewModel);
         }
         [HttpPost]
         public ActionResult Save(Movie movie)
         {
-            return View();
+            if (movie.Id == 0)
+            {
+                _context.Movies.Add(movie);
+            }
+            else
+            {
+                var moviesInDb = _context.Movies.Single(m => m.Id == movie.Id);
+                moviesInDb.Name = movie.Name;
+                moviesInDb.AddedDate = movie.AddedDate;
+                moviesInDb.ReleaseDate = movie.ReleaseDate;
+                moviesInDb.NumberOfStock = movie.NumberOfStock;
+                moviesInDb.GenreId = movie.GenreId;
+                moviesInDb.IsSubscribedToNewsletter = movie.IsSubscribedToNewsletter;
+            }
+            _context.SaveChanges();
+            var movieList = _context.Movies.Include(c => c.Genre).ToList();
+            return View("Random", movieList);
         }
 
         public ActionResult Edit(int id)
         {
-            throw new System.NotImplementedException();
+            var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == id);
+            var viewModel = new MovieFormViewModel()
+            {
+                Movie = movie,
+                Genres = _context.Genres.ToList()
+            };
+
+            return View("Save", viewModel);
         }
     }
 }

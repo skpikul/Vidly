@@ -3,8 +3,15 @@
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@if (Model.Customer == null)
+{
+    <h2>New Customer</h2>
+}
+else
+{
+    <h2>Edit Customer</h2>
+}
 
-<h2>New Customer</h2>
 <h5>@Html.ActionLink("Back to List", "Customer")</h5>
 @using (Html.BeginForm("Save", "Customers"))
 {
