@@ -277,3 +277,4 @@ C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.csproj.GenerateResourc
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.csproj.CoreCompileInputs.cache
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.pdb
+C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.csprojResolveAssemblyReference.cache
