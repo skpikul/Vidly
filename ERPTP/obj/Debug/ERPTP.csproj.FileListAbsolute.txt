@@ -279,3 +279,4 @@ C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.csproj.CoreCompileInpu
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.pdb
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.AddValidtaionRequiredinMovie.resources
+C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.TextPropertyChange.resources

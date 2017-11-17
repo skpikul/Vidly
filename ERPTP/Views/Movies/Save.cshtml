@@ -14,7 +14,6 @@ else
 <h5>@Html.ActionLink("Back To List", "Random")</h5>
 @using (Html.BeginForm("Save", "Movies"))
 {
-    @Html.AntiForgeryToken()
     <div class="form-group">
         @Html.LabelFor(n=>n.Movie.Name)
         @Html.TextBoxFor(n=>n.Movie.Name, new {@class="form-control"})
@@ -42,6 +41,7 @@ else
 
     </div>
     @Html.HiddenFor(i=>i.Movie.Id)
+    @Html.AntiForgeryToken()
     <button class="btn btn-default">Save</button>
 }
 @section scripts

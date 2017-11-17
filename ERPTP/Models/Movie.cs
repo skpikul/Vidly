@@ -12,16 +12,16 @@ namespace ERPTP.Models
 
         [Required]
         [Display(Name = "Release Date")]
-        public DateTime ReleaseDate { get; set; }
+        public DateTime? ReleaseDate { get; set; }
 
         [Required]
         [Display(Name = "Added Date")]
-        public DateTime AddedDate { get; set; }
+        public DateTime? AddedDate { get; set; }
 
         [Required]
         [Display(Name = "Number Of Stock")]
         [Range(1, 20, ErrorMessage = "The field Number of Stock must be 1 to 20,")]
-        public int NumberOfStock { get; set; }
+        public int? NumberOfStock { get; set; }
         public Genre Genre { get; set; }
 
         [Required]

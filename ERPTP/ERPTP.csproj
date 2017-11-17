@@ -204,6 +204,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\CustomersController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -258,6 +259,10 @@
     <Compile Include="Migrations\201711161005452_AddValidtaionRequiredinMovie.cs" />
     <Compile Include="Migrations\201711161005452_AddValidtaionRequiredinMovie.Designer.cs">
       <DependentUpon>201711161005452_AddValidtaionRequiredinMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711161248472_TextPropertyChange.cs" />
+    <Compile Include="Migrations\201711161248472_TextPropertyChange.Designer.cs">
+      <DependentUpon>201711161248472_TextPropertyChange.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -399,6 +404,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711161005452_AddValidtaionRequiredinMovie.resx">
       <DependentUpon>201711161005452_AddValidtaionRequiredinMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711161248472_TextPropertyChange.resx">
+      <DependentUpon>201711161248472_TextPropertyChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
