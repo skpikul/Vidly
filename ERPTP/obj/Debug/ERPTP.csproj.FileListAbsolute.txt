@@ -280,3 +280,5 @@ C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.pdb
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.AddValidtaionRequiredinMovie.resources
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.TextPropertyChange.resources
+C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\AutoMapper.dll
+C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\AutoMapper.xml

@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System.Web.Http;
 
 namespace ERPTP
@@ -10,7 +9,9 @@ namespace ERPTP
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-
+            var setting = config.Formatters.JsonFormatter.SerializerSettings;
+            setting.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            setting.Formatting = Formatting.Indented;
             // Web API routes
             config.MapHttpAttributeRoutes();
 
