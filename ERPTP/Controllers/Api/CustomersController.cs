@@ -64,9 +64,10 @@ namespace ERPTP.Controllers.Api
                 return NotFound();
 
             Mapper.Map(customerDto, customerInDb);
+
             _context.SaveChanges();
 
-            return UpdateCustomer(customerInDb.Id, customerDto);
+            return Ok();
         }
 
         //DELETE /api/customrs/1
@@ -81,7 +82,7 @@ namespace ERPTP.Controllers.Api
             _context.Customers.Remove(customerInDb);
             _context.SaveChanges();
 
-            return DeleteCustomer(customerInDb.Id);
+            return Ok();
         }
 
     }
