@@ -19,7 +19,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44362</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -215,6 +215,8 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Dtos\CustomerDto.cs" />
+    <Compile Include="Dtos\GenreDto.cs" />
+    <Compile Include="Dtos\MembershipTypeDto.cs" />
     <Compile Include="Dtos\MovieDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -271,15 +273,31 @@
     <Compile Include="Migrations\201711161248472_TextPropertyChange.Designer.cs">
       <DependentUpon>201711161248472_TextPropertyChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712010714362_SeedMathod.cs" />
+    <Compile Include="Migrations\201712010714362_SeedMathod.Designer.cs">
+      <DependentUpon>201712010714362_SeedMathod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712010856263_AddToDrivingLicenseForApplicationUser.cs" />
+    <Compile Include="Migrations\201712010856263_AddToDrivingLicenseForApplicationUser.Designer.cs">
+      <DependentUpon>201712010856263_AddToDrivingLicenseForApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712011013494_AddToPhoneNumberForApplicationUser.cs" />
+    <Compile Include="Migrations\201712011013494_AddToPhoneNumberForApplicationUser.Designer.cs">
+      <DependentUpon>201712011013494_AddToPhoneNumberForApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="Models\Genre.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YrarsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\CustomerFormViewModel.cs" />
@@ -534,13 +552,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Movies\Random.cshtml" />
+    <Content Include="Views\Movies\List.cshtml" />
     <Content Include="Views\Customers\Customer.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
     <Content Include="Views\Movies\Save.cshtml" />
+    <Content Include="Views\Movies\ReadOnly.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -590,6 +609,15 @@
     <EmbeddedResource Include="Migrations\201711161248472_TextPropertyChange.resx">
       <DependentUpon>201711161248472_TextPropertyChange.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712010714362_SeedMathod.resx">
+      <DependentUpon>201712010714362_SeedMathod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712010856263_AddToDrivingLicenseForApplicationUser.resx">
+      <DependentUpon>201712010856263_AddToDrivingLicenseForApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712011013494_AddToPhoneNumberForApplicationUser.resx">
+      <DependentUpon>201712011013494_AddToPhoneNumberForApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -609,7 +637,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>57892</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:57892/</IISUrl>
+          <IISUrl>https://localhost:44362/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

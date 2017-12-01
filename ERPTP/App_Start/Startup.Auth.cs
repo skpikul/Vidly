@@ -1,11 +1,10 @@
-﻿using System;
+﻿using ERPTP.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
 using Owin;
-using ERPTP.Models;
+using System;
 
 namespace ERPTP
 {
@@ -54,9 +53,9 @@ namespace ERPTP
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1872017369714085",
+               appSecret: "6b1fd8c2b7ebdbb546ad919321f96cab");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

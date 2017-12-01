@@ -2,6 +2,7 @@
 using ERPTP.Dtos;
 using ERPTP.Models;
 using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
 
@@ -20,7 +21,8 @@ namespace ERPTP.Controllers.Api
         [HttpGet]
         public IHttpActionResult GetCustomer()
         {
-            return Ok(_context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>));
+            return Ok(_context.Customers.Include(m=>m.MembershipType)
+                .ToList().Select(Mapper.Map<Customer, CustomerDto>));
         }
 
         //GET /api/customers/1

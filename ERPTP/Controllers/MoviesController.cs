@@ -21,10 +21,9 @@ namespace ERPTP.Controllers
         }
 
         // GET: Movies
-        public ActionResult Random()
+        public ActionResult Index()
         {
-            var movie = _context.Movies.Include(c=>c.Genre).ToList();
-            return View(movie);
+            return View(User.IsInRole(RoleName.CanManageMovies) ? "List" : "ReadOnly");
         }
 
         public ActionResult Details(int id)
@@ -32,7 +31,7 @@ namespace ERPTP.Controllers
             var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == id);
             return View(movie);
         }
-
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Save()
         {
             var viewModel = new MovieFormViewModel
@@ -44,6 +43,7 @@ namespace ERPTP.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Save(Movie movie)
         {
             if (!ModelState.IsValid)
@@ -71,9 +71,9 @@ namespace ERPTP.Controllers
             }
             _context.SaveChanges();
             var movieList = _context.Movies.Include(c => c.Genre).ToList();
-            return View("Random", movieList);
+            return View("List", movieList);
         }
-
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == id);

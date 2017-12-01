@@ -2,6 +2,7 @@
 using ERPTP.Dtos;
 using ERPTP.Models;
 using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
 
@@ -20,7 +21,7 @@ namespace ERPTP.Controllers.Api
         [HttpGet]
         public IHttpActionResult GetMovies()
         {
-            return Ok(_context.Movies.ToList().Select(Mapper.Map<Movie, MovieDto>));
+            return Ok(_context.Movies.Include(g=>g.Genre).ToList().Select(Mapper.Map<Movie, MovieDto>));
         }
 
         //GET /api/Movies/1

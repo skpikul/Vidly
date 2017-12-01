@@ -138,6 +138,12 @@ D:\Windows\Document\ERPTP\ERPTP\obj\Debug\ERPTP.dll
 D:\Windows\Document\ERPTP\ERPTP\obj\Debug\ERPTP.pdb
 D:\Windows\Document\ERPTP\ERPTP\obj\Debug\ERPTP.csprojResolveAssemblyReference.cache
 D:\Windows\Document\ERPTP\ERPTP\obj\Debug\ERPTP.Migrations.IsSubscribe.resources
+C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\System.IO.Compression.dll
+C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\VBCSCompiler.exe
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\ApplicationInsights.config
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\ERPTP.dll.config
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\ERPTP.dll
@@ -149,13 +155,9 @@ C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\csi.exe
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\csi.exe.config
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\csi.rsp
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\Microsoft.Win32.Primitives.dll
@@ -165,7 +167,6 @@ C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\System.Console.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\System.Diagnostics.Process.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\System.IO.Compression.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\System.IO.FileSystem.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\System.IO.FileSystem.Primitives.dll
@@ -188,7 +189,6 @@ C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\System.Xml.XPath.XDocument.
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\vbc.exe
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\vbc.exe.config
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\vbc.rsp
-C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\VBCSCompiler.exe
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\Antlr3.Runtime.dll
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\AutoMapper.dll
@@ -265,7 +265,6 @@ C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\System.Web.Http.WebHost.xml
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.csprojResolveAssemblyReference.cache
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.InitialModel.resources
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.AddNewsLetter.resources
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.AddMemebershiptype.resources
@@ -279,6 +278,9 @@ C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.IsSubscribe
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.AddValidtaionRequired.resources
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.AddValidtaionRequiredinMovie.resources
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.TextPropertyChange.resources
+C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.SeedMathod.resources
+C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.AddToDrivingLicenseForApplicationUser.resources
+C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.Migrations.AddToPhoneNumberForApplicationUser.resources
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.csproj.GenerateResource.Cache
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.csproj.CoreCompileInputs.cache
 C:\Users\Pikul\Desktop\GigHub\Vidly\ERPTP\obj\Debug\ERPTP.dll
