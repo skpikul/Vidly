@@ -5,7 +5,7 @@
 }
 
 <h2>New Rental From</h2>
-<form>
+<form id="newRental">
     <div class="form-group">
         <label>Customer</label>
         <div class="tt-container">
@@ -16,7 +16,7 @@
     <div class="form-group">
         <label>Movie</label>
         <div class="tt-container">
-            <input id="movie" type="text" value="" class="form-control" />
+            <input id="movie" name="movie" data-rule-atLeastOneMovie="true" type="text" value="" class="form-control" />
         </div>
     </div>
     <div class="row">
@@ -77,6 +77,38 @@
 
                     vm.movieIds.push(movie.id);
                 });
+
+            $.validator.addMethod("validCustomer", function () {
+                return vm.customerId && vm.movieIds !== 0;
+            }, "Please select a valid Customer.");
+
+            $.validator.addMethod("atLeastOneMovie", function () {
+                return vm.movieIds.length > 0;
+            }, "Please select at least one movie");
+
+            var validator = $("#newRental").validate({
+                submitHandler: function (e) {
+                    $.ajax({
+                        url: "/api/newRentals",
+                        method: "POST",
+                        data: vm
+                    }).done(function () {
+                        toastr.success("Rentals successfully recorded.");
+
+                        $("#customer").typeahead("val", "");
+                        $("#movie").typeahead("val", "");
+                        $("#movies").empty();
+
+                        vm = { movieIds: [] };
+                        validator.resetForm();
+
+                    }).fail(function () {
+                        toastr.error("Something unexpected happened.");
+                    });
+
+                    return false;
+                }
+            });
         });
     </script>
 }

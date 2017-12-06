@@ -19,7 +19,7 @@ namespace ERPTP.Controllers.Api
         {
             var cutomer = _context.Customers.Single(c => c.Id == newRental.CustomerId);
 
-            var movies = _context.Movies.Where(m => newRental.MovieIds.Contains(m.Id));
+            var movies = _context.Movies.Where(m => newRental.MovieIds.Contains(m.Id)).ToList();
 
             foreach (var movie in movies)
             {
@@ -37,6 +37,7 @@ namespace ERPTP.Controllers.Api
                 _context.Rentals.Add(rental);
             }
             _context.SaveChanges();
+
             return Ok();
         }
     }
