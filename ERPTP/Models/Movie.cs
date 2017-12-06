@@ -27,5 +27,7 @@ namespace ERPTP.Models
         [Required]
         [Display(Name = "Genre")]
         public byte GenreId { get; set; }
+
+        public byte NumberAvailable { get; set; }
     }
 }

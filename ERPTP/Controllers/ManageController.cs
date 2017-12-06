@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ERPTP.Models;
+using ERPTP.ViewModel;
 
 namespace ERPTP.Controllers
 {
